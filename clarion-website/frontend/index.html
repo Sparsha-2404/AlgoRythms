@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLARION - Dynamic Knowledge Graph for Academic Communities</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">CLARION</div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#demo">Interactive Demo</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="auth-buttons">
+                <button id="login-btn" class="btn btn-outline">Log In</button>
+                <button id="signup-btn" class="btn btn-primary">Sign Up</button>
+            </div>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Academic Communities</h1>
+                <p class="tagline">An AI-powered platform that leverages a dynamic knowledge graph to revolutionize how academic communities interact, collaborate, and learn together.</p>
+                <div class="cta-buttons">
+                    <button id="demo-btn" class="btn btn-primary">Try Interactive Demo</button>
+                    <button id="learn-btn" class="btn btn-secondary">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div id="hero-graph" class="graph-preview"></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="section features-section">
+        <div class="container">
+            <h2 class="section-title">Core Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Visual Understanding</h3>
+                    <p>Experience knowledge as an interactive graph, where concepts connect organically and reveal new insights through their relationships.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Learning Progress</h3>
+                    <p>Track your academic journey systematically as your contributions become part of the evolving knowledge ecosystem.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Smart Recommendations</h3>
+                    <p>Receive personalized guidance based on your interactions, interests, and the collective wisdom of the community.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration Tools</h3>
+                    <p>Connect with peers, share resources, and work on projects together in an integrated environment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Project Management</h3>
+                    <p>Initiate and manage academic projects with built-in tools for tracking progress and outcomes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Resource Library</h3>
+                    <p>Access and contribute to a growing library of academic resources, all interconnected within the knowledge graph.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section principles-section">
+        <div class="container">
+            <h2 class="section-title">Core Principles</h2>
+            <div class="principles-container">
+                <div class="principle-card">
+                    <div class="principle-number">1</div>
+                    <div class="principle-content">
+                        <h3>Interconnected Learning</h3>
+                        <p>Knowledge does not exist in isolation; interdisciplinary links must be acknowledged. CLARION maps these connections visually, helping users discover insights across traditional academic boundaries.</p>
+                    </div>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-number">2</div>
+                    <div class="principle-content">
+                        <h3>Dynamic Knowledge</h3>
+                        <p>Information evolves, and so should the learning process. Our platform adapts as new discoveries emerge, research advances, and community understanding grows, ensuring you're always working with current knowledge.</p>
+                    </div>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-number">3</div>
+                    <div class="principle-content">
+                        <h3>Community Collaboration</h3>
+                        <p>The most effective learning happens when it is collective, interactive, and project-driven. CLARION facilitates meaningful connections between researchers, educators, and students through shared resources and collaborative projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section how-it-works">
+        <div class="container">
+            <h2 class="section-title">How CLARION Works</h2>
+            <div class="how-it-works-content">
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Create Knowledge Nodes</h3>
+                            <p>Every question, answer, resource, or project becomes a node in the knowledge graph.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Connect Related Concepts</h3>
+                            <p>The system automatically creates connections between related nodes, forming a web of knowledge.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Discover Insights</h3>
+                            <p>Explore the graph visually to discover new connections and insights across disciplines.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Collaborate & Expand</h3>
+                            <p>Work with peers to expand the knowledge graph through collaborative projects and shared resources.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="animation-container">
+                    <div class="workflow-animation">
+                        <!-- Animation will be inserted by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommendations" class="section recommendations-section">
+        <div class="container">
+          <h2 class="section-title">Find the Best Learning Resources 🚀</h2>
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Enter a topic (e.g., Machine Learning)">
+            <button onclick="handleSearch()">Search</button>
+          </div>
+          <div id="resource-results" class="recommendations-grid"></div>
+        </div>
+      </section>
+
+    <section id="demo" class="section demo-section">
+        <div class="container">
+            <h2 class="section-title">Interactive Knowledge Graph Demo</h2>
+            <div class="demo-container">
+                <div class="controls">
+                    <div class="control-group">
+                        <h3>Add to Knowledge Graph</h3>
+                        <div class="input-group">
+                            <select id="node-type">
+                                <option value="question">Question</option>
+                                <option value="resource">Resource</option>
+                                <option value="project">Project</option>
+                                <option value="concept">Concept</option>
+                            </select>
+                            <input type="text" id="node-title" placeholder="Enter title...">
+                            <button id="add-node" class="btn btn-primary">Add</button>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <h3>Connect Nodes</h3>
+                        <div class="input-group">
+                            <select id="source-node">
+                                <!-- Will be populated dynamically -->
+                            </select>
+                            <select id="target-node">
+                                <!-- Will be populated dynamically -->
+                            </select>
+                            <button id="add-edge" class="btn btn-secondary">Connect</button>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <h3>Graph Controls</h3>
+                        <div class="button-group">
+                            <button id="reset-graph" class="btn btn-outline">Reset Graph</button>
+                            <button id="load-example" class="btn btn-outline">Load Example</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="graph-container" class="graph-container">
+                    <!-- The interactive graph will be rendered here using D3.js -->
+                </div>
+                <div class="node-details">
+                    <div id="detail-panel" class="detail-panel">
+                        <h3>Node Details</h3>
+                        <p id="no-selection" class="no-selection">Click on a node to view details</p>
+                        <div id="details-content" class="details-content hidden">
+                            <h4 id="detail-title"></h4>
+                            <p id="detail-type"></p>
+                            <p id="detail-connections"></p>
+                            <div id="related-nodes" class="related-nodes"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Academic Community?</h2>
+                <p>Join the growing network of institutions leveraging CLARION to enhance collaboration, learning, and knowledge creation.</p>
+                <div class="cta-buttons">
+                    <button id="request-demo-btn" class="btn btn-primary">Request Demo</button>
+                    <button id="contact-btn" class="btn btn-outline">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">CLARION</div>
+                    <p>Transforming academic communities through interconnected, dynamic knowledge graphs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 CLARION. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Templates -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Log In to CLARION</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+            <p class="modal-footer">Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a></p>
+        </div>
+    </div>
+
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Create CLARION Account</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-role">Role</label>
+                    <select id="signup-role">
+                        <option value="researcher">Researcher</option>
+                        <option value="educator">Educator</option>
+                        <option value="student">Student</option>
+                        <option value="administrator">Administrator</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+            <p class="modal-footer">Already have an account? <a href="#" id="switch-to-login">Log In</a></p>
+        </div>
+    </div>
+
+    <div id="demo-modal" class="modal">
+        <div class="modal-content large">
+            <span class="close-btn">&times;</span>
+            <h2>Request Demo Access</h2>
+            <form id="demo-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="demo-name">Name</label>
+                        <input type="text" id="demo-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="demo-email">Email</label>
+                        <input type="email" id="demo-email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="demo-organization">Organization</label>
+                        <input type="text" id="demo-organization" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="demo-role">Role</label>
+                        <select id="demo-role">
+                            <option value="researcher">Researcher</option>
+                            <option value="educator">Educator</option>
+                            <option value="administrator">Administrator</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="demo-message">How do you plan to use CLARION?</label>
+                    <textarea id="demo-message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/graph.js"></script>
+    <script src="scripts/app.js"></script>
+    <script>
+        async function handleSearch() {
+          const input = document.getElementById('searchInput').value.trim();
+          if (!input) {
+            alert('Please enter a topic to search.');
+            return;
+          }
+        
+          const tags = input.toLowerCase().split(' ');
+        
+          try {
+            const response = await fetch('http://localhost:5000/api/resources/recommend', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ tags })
+            });
+        
+            if (!response.ok) {
+              const error = await response.json();
+              alert(error.msg || 'Something went wrong.');
+              return;
+            }
+        
+            const recommendedResources = await response.json();
+            displayRecommendedResources(recommendedResources);
+        
+          } catch (error) {
+            console.error('Error fetching resources:', error);
+            alert('Failed to load resources.');
+          }
+        }
+        
+        function displayRecommendedResources(resources) {
+          const container = document.getElementById('resource-results');
+          container.innerHTML = '';
+        
+          if (resources.length === 0) {
+            container.innerHTML = '<p>No resources found for your search.</p>';
+            return;
+          }
+        
+          resources.forEach(res => {
+            const card = `
+              <div class="resource-card">
+                <h3>${res.title}</h3>
+                <p><strong>Type:</strong> ${res.type}</p>
+                <p><strong>Rating:</strong> ⭐ ${res.rating}</p>
+                <a href="${res.link}" target="_blank" class="btn btn-primary">View Resource</a>
+              </div>
+            `;
+            container.innerHTML += card;
+          });
+        }
+        </script>
+        
+</body>
+</html>
+
